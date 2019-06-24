@@ -12,7 +12,7 @@
 (defn cutify [v]
   (cond
     (vector? v) (conj v "<3")
-    :else (throw ex-info {:cause "Input not a vector"})))
+    :else (throw (Exception. "Input not a vector"))))
 
 (defn spiff-destructuring [v]
   (let [[a _ b & rest] v]
